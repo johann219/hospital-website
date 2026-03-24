@@ -34,6 +34,56 @@ addDoctor({
     accolades: 'Candidate of Medical Science', 
 });
 
+addDoctor({
+    name: 'Ivan', 
+    surname: 'Ivanov', 
+    patronymic: 'Ivanovich', 
+    specialty: 'Neurosurgeon', 
+    accolades: 'Doctor of Medical Science', 
+    department: 'Neurosurgery Department'
+});
+
+addDoctor({
+    name: 'Petr',
+    patronymic: 'Petrovich', 
+    surname: 'Petrov', 
+    department: 'Surgery Department',
+    specialty: 'General Surgeon', 
+    accolades: 'Candidate of Medical Science', 
+});addDoctor({
+    name: 'Ivan', 
+    surname: 'Ivanov', 
+    patronymic: 'Ivanovich', 
+    specialty: 'Neurosurgeon', 
+    accolades: 'Doctor of Medical Science', 
+    department: 'Neurosurgery Department'
+});
+
+addDoctor({
+    name: 'Petr',
+    patronymic: 'Petrovich', 
+    surname: 'Petrov', 
+    department: 'Surgery Department',
+    specialty: 'General Surgeon', 
+    accolades: 'Candidate of Medical Science', 
+});addDoctor({
+    name: 'Ivan', 
+    surname: 'Ivanov', 
+    patronymic: 'Ivanovich', 
+    specialty: 'Neurosurgeon', 
+    accolades: 'Doctor of Medical Science', 
+    department: 'Neurosurgery Department'
+});
+
+addDoctor({
+    name: 'Petr',
+    patronymic: 'Petrovich', 
+    surname: 'Petrov', 
+    department: 'Surgery Department',
+    specialty: 'General Surgeon', 
+    accolades: 'Candidate of Medical Science', 
+});
+
 const createDoctorCardElement = (doctor) => {
     const newDoctorCardFragment = doctorCardTemplateElement.content.cloneNode(true);
 
