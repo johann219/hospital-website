@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles/styles.css';
 import Doctor from './departments/doctor.js';
 import { SELECTOR } from './const.js';
 
@@ -36,22 +36,21 @@ addDoctor({
 
 const createDoctorCardElement = (doctor) => {
     const newDoctorCardFragment = doctorCardTemplateElement.content.cloneNode(true);
-    const newDoctorCardElement = newDoctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD);
 
-    const newDoctorCardFioElement = newDoctorCardElement.querySelector(SELECTOR.DOCTOR_CARD_FIO);
+    const newDoctorCardFioElement = newDoctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_FIO);
     newDoctorCardFioElement.textContent = `${doctor.surname} ${doctor.name} ${doctor.patronymic}`;
 
-    const newDoctorCardSpecialtyElement = newDoctorCardElement.querySelector(SELECTOR.DOCTOR_CARD_SPECIALTY);
+    const newDoctorCardSpecialtyElement = newDoctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_SPECIALTY);
     newDoctorCardSpecialtyElement.textContent = doctor.specialty;
 
-    const newDoctorCardAccoladesElement = newDoctorCardElement.querySelector(SELECTOR.DOCTOR_CARD_ACCOLADES);
+    const newDoctorCardAccoladesElement = newDoctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_ACCOLADES);
     newDoctorCardAccoladesElement.textContent = doctor.accolades;
 
-    return newDoctorCardElement;
+    return newDoctorCardFragment;
 }
 
 const renderDoctorList = (doctorList) => {
-    doctorListElement.innerHTML = '';
+    doctorListElement.replaceChildren();
 
     const newFragment = new DocumentFragment();
 
