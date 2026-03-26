@@ -6,7 +6,7 @@
         "specialty": ["Врач по эндоваскулярной диагностике и лечению"],
         "accolades": "Руководитель центра реконструктивно-пластической и сосудистой хирургии, доктор медицинских наук",
         "department": "Отделение рентгенохирургических методов диагностики и лечения",
-        "photoAddress": "/public/images/garbuzov-r-v.jpg",
+        "photoAddress": "/images/garbuzov-r-v.jpg",
         "hasAppointments": false,
         "isDepartmentHead": true
     },
@@ -17,7 +17,7 @@
         "specialty": ["Детский хирург"],
         "accolades": "Заместитель главного врача по хирургической работе, кандидат медицинских наук",
         "department": "Отделение реконструктивно-пластической хирургии",
-        "photoAddress": "/public//images/narbutov-a-g.jpg",
+        "photoAddress": "/images/narbutov-a-g.jpg",
         "hasAppointments": false,
         "isDepartmentHead": true
     },
@@ -28,7 +28,7 @@
         "specialty": ["Нейрохирург"],
         "accolades": "",
         "department": "Нейрохирургическое отделение",
-        "photoAddress": "/public//images/palm-v-v.jpg",
+        "photoAddress": "/images/palm-v-v.jpg",
         "hasAppointments": false,
         "isDepartmentHead": true
     },
@@ -39,7 +39,7 @@
         "specialty": ["Челюстно-лицевой хирург"],
         "accolades": "",
         "department": "Отделение челюстно-лицевой хирургии",
-        "photoAddress": "/public//images/ryzhov-r-v.jpg",
+        "photoAddress": "/images/ryzhov-r-v.jpg",
         "hasAppointments": false,
         "isDepartmentHead": false
     },
@@ -50,7 +50,7 @@
         "specialty": ["Травматолог-ортопед"],
         "accolades": "Кандидат медицинских наук",
         "department": "Отделение травматологии и ортопедии",
-        "photoAddress": "/public//images/panteleev-a-a.jpg",
+        "photoAddress": "/images/panteleev-a-a.jpg",
         "hasAppointments": false,
         "isDepartmentHead": false
     },
@@ -61,7 +61,7 @@
         "specialty": ["Челюстно-лицевой хирург"],
         "accolades": "Доктор медицинских наук",
         "department": "Отделение челюстно-лицевой хирургии",
-        "photoAddress": "/public//images/kugushev-a-u.jpg",
+        "photoAddress": "/images/kugushev-a-u.jpg",
         "hasAppointments": false,
         "isDepartmentHead": true
     }

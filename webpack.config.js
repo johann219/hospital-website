@@ -1,5 +1,6 @@
 import path from "node:path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyPlugin from "copy-webpack-plugin";
 
 export default {
     mode: "development",
@@ -12,10 +13,16 @@ export default {
     devtool: "eval-source-map",
     devServer: {
         watchFiles: ["./src/template.html"],
+        static: "./public",
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/template.html",
+        }),
+        new CopyPlugin({
+            patterns:   [
+                { from: "public", to: "" },
+            ],
         }),
     ],
     module: {
