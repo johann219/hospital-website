@@ -5,22 +5,22 @@ import { SELECTOR } from './const.js';
 const doctorListElement = document.querySelector(SELECTOR.DOCTOR_LIST);
 const doctorCardTemplateElement = document.querySelector(SELECTOR.DOCTOR_CARD_TEMPLATE);
 
-const getDoctorsData = async () => {
+const fetchDoctorsData = async () => {
     const response = await fetch('/doctorsData.json');
-
-    console.log(response);
-
     const doctorsData = await response.json();
 
-    console.log(doctorsData);
+    return doctorsData;
 };  
 
-const plainDoctorRegistry = getDoctorsData();
+const initDoctorRegistry = async () => {
+    const plainDoctorRegistry = await fetchDoctorsData();
 
-const rehydrateDoctorRegistry = plainDoctorRegistry.map((plainDoctorObject) => new Doctor(plainDoctorObject));
+    const doctorRegistry = plainDoctorRegistry.map((plainDoctorObject) => new Doctor(plainDoctorObject));
 
-const doctorRegistry = rehydrateDoctorRegistry(plainDoctorRegistry);
-
+    console.log(doctorRegistry);
+    
+    return doctorRegistry;
+};
 // const createDoctorCardElement = (doctor) => {
 //     const newDoctorCardFragment = doctorCardTemplateElement.content.cloneNode(true);
 
