@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Роман",
+        "surname": "Гарбузов",
+        "patronymic": "Вячеславович",
+        "specialty": ["Врач по эндоваскулярной диагностике и лечению"],
+        "accolades": "Руководитель центра реконструктивно-пластической и сосудистой хирургии, доктор медицинских наук",
+        "department": "Отделение рентгенохирургических методов диагностики и лечения",
+        "photoAddress": "/public/images/garbuzov-r-v.jpg",
+        "hasAppointments": false,
+        "isDepartmentHead": true
+    },
+    {
+        "name": "Антон",
+        "surname": "Нарбутов",
+        "patronymic": "Геннадиевич",
+        "specialty": ["Детский хирург"],
+        "accolades": "Заместитель главного врача по хирургической работе, кандидат медицинских наук",
+        "department": "Отделение реконструктивно-пластической хирургии",
+        "photoAddress": "/public//images/narbutov-a-g.jpg",
+        "hasAppointments": false,
+        "isDepartmentHead": true
+    },
+    {
+        "name": "Валентин",
+        "surname": "Пальм",
+        "patronymic": "Вальтерович",
+        "specialty": ["Нейрохирург"],
+        "accolades": "",
+        "department": "Нейрохирургическое отделение",
+        "photoAddress": "/public//images/palm-v-v.jpg",
+        "hasAppointments": false,
+        "isDepartmentHead": true
+    },
+    {
+        "name": "Роман",
+        "surname": "Рыжов",
+        "patronymic": "Вячеславович",
+        "specialty": ["Челюстно-лицевой хирург"],
+        "accolades": "",
+        "department": "Отделение челюстно-лицевой хирургии",
+        "photoAddress": "/public//images/ryzhov-r-v.jpg",
+        "hasAppointments": false,
+        "isDepartmentHead": false
+    },
+    {
+        "name": "Андрей",
+        "surname": "Пантелеев",
+        "patronymic": "Андреевич",
+        "specialty": ["Травматолог-ортопед"],
+        "accolades": "Кандидат медицинских наук",
+        "department": "Отделение травматологии и ортопедии",
+        "photoAddress": "/public//images/panteleev-a-a.jpg",
+        "hasAppointments": false,
+        "isDepartmentHead": false
+    },
+    {
+        "name": "Кугушев",
+        "surname": "Александр",
+        "patronymic": "Юрьевич",
+        "specialty": ["Челюстно-лицевой хирург"],
+        "accolades": "Доктор медицинских наук",
+        "department": "Отделение челюстно-лицевой хирургии",
+        "photoAddress": "/public//images/kugushev-a-u.jpg",
+        "hasAppointments": false,
+        "isDepartmentHead": true
+    }
+]
