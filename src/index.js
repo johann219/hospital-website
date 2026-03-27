@@ -12,46 +12,53 @@ const fetchDoctorsData = async () => {
     return doctorsData;
 };  
 
-const initDoctorRegistry = async () => {
+const hydrateDoctorsData = async () => {
     const plainDoctorRegistry = await fetchDoctorsData();
-
     const doctorRegistry = plainDoctorRegistry.map((plainDoctorObject) => new Doctor(plainDoctorObject));
 
-    console.log(doctorRegistry);
-    
     return doctorRegistry;
 };
-// const createDoctorCardElement = (doctor) => {
-//     const newDoctorCardFragment = doctorCardTemplateElement.content.cloneNode(true);
 
-//     const newDoctorPhotoElement = 
+/**
+* @param {Doctor} doctor
+*/
 
-//     const newDoctorCardFioElement = newDoctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_FIO);
-//     newDoctorCardFioElement.textContent = `${doctor.surname} ${doctor.name} ${doctor.patronymic}`;
+const createDoctorCardElement = (doctor) => {
+    const doctorCardFragment = doctorCardTemplateElement.content.cloneNode(true);
 
-//     const newDoctorCardSpecialtyElement = newDoctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_SPECIALTY);
-//     newDoctorCardSpecialtyElement.textContent = doctor.specialty;
+    const doctorPhotoElement = doctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_PHOTO);
+    doctorPhotoElement.setAttribute('src', doctor.photoUrl);
 
-//     const newDoctorCardAccoladesElement = newDoctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_ACCOLADES);
-//     newDoctorCardAccoladesElement.textContent = doctor.accolades;
+    const doctorCardFioElement = doctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_FIO);
+    doctorCardFioElement.textContent = `${doctor.surname} ${doctor.name} ${doctor.patronymic}`;
 
-//     return newDoctorCardFragment;
-// }
+    const doctorCardSpecialtyElement = doctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_SPECIALTY);
+    doctorCardSpecialtyElement.textContent = doctor.specialty;
 
-// const renderDoctorList = (doctorList) => {
-//     doctorListElement.replaceChildren();
+    const doctorCardAccoladesElement = doctorCardFragment.querySelector(SELECTOR.DOCTOR_CARD_ACCOLADES);
+    doctorCardAccoladesElement.textContent = doctor.accolades;
 
-//     const newFragment = new DocumentFragment();
+    return doctorCardFragment;
+}
 
-//     doctorList.forEach((doctor) => {
-//         const newDoctorCardElement = createDoctorCardElement(doctor);
-//         newFragment.append(newDoctorCardElement);
-//     })
+const renderDoctorList = (doctorList) => {
+    doctorListElement.replaceChildren();
 
-//     doctorListElement.append(newFragment);
-// };
+    const newFragment = new DocumentFragment();
 
-// console.log(doctorListElement);
-// console.log(doctorCardTemplateElement);
+    doctorList.forEach((doctor) => {
+        const doctorCardElement = createDoctorCardElement(doctor);
+        newFragment.append(doctorCardElement);
+    })
 
-// renderDoctorList(doctorRegistry);
+    doctorListElement.append(newFragment);
+};
+
+const initDoctorRegistry = async () => {
+    const plainDoctorRegistry = await fetchDoctorsData();
+    const doctorRegistry = plainDoctorRegistry.map((plainDoctorObject) => new Doctor(plainDoctorObject));
+
+    renderDoctorList(doctorRegistry);
+};
+
+initDoctorRegistry();

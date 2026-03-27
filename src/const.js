@@ -5,6 +5,7 @@ const SELECTOR = {
     DOCTOR_CARD_FIO: '.doctor-card-fio',
     DOCTOR_CARD_SPECIALTY: '.doctor-card-specialty',
     DOCTOR_CARD_ACCOLADES: '.doctor-card-accolades',
+    DOCTOR_CARD_PHOTO: '.doctor-card-photo',
 }
 
 export { SELECTOR };
