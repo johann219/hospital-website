@@ -1,14 +1,12 @@
 export default class Doctor {
-    constructor ( {name, surname, patronymic, specialty, accolades, department, photoUrl, hasAppointments, isDepartmentHead} ) {
+    constructor ( {id, name, surname, patronymic, specialties, accolades, photoUrl, hasAppointments} ) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
-        this.specialty = specialty;
+        this.specialties = specialties;
         this.accolades = accolades;
-        this.department = department;
         this.photoUrl = photoUrl;
         this.hasAppointments = hasAppointments;
-        this.isDepartmentHead = isDepartmentHead;
-        this.employeeID = crypto.randomUUID();
     }
 }

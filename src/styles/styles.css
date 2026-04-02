@@ -33,7 +33,7 @@ img, picture, video, canvas, svg {
 }
 
 body {
-    background-color: var(--logo-blue);
+    /* background-color: var(--logo-blue); */
     display: flex;
     flex-direction: column;
     align-items: safe center;
