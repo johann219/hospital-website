@@ -1,68 +1,212 @@
 [
     {
-        "name": "Роман",
-        "surname": "Гарбузов",
-        "patronymic": "Вячеславович",
-        "specialty": ["Врач по эндоваскулярной диагностике и лечению"],
-        "accolades": "Руководитель центра реконструктивно-пластической и сосудистой хирургии, доктор медицинских наук",
-        "department": "Отделение рентгенохирургических методов диагностики и лечения",
-        "photoUrl": "/images/garbuzov-r-v.jpg",
-        "hasAppointments": false,
-        "isDepartmentHead": true
-    },
-    {
-        "name": "Антон",
-        "surname": "Нарбутов",
-        "patronymic": "Геннадиевич",
-        "specialty": ["Детский хирург"],
-        "accolades": "Заместитель главного врача по хирургической работе, кандидат медицинских наук",
-        "department": "Отделение реконструктивно-пластической хирургии",
-        "photoUrl": "/images/narbutov-a-g.jpg",
-        "hasAppointments": false,
-        "isDepartmentHead": true
-    },
-    {
-        "name": "Валентин",
-        "surname": "Пальм",
-        "patronymic": "Вальтерович",
-        "specialty": ["Нейрохирург"],
-        "accolades": "",
-        "department": "Нейрохирургическое отделение",
-        "photoUrl": "/images/palm-v-v.jpg",
-        "hasAppointments": false,
-        "isDepartmentHead": true
-    },
-    {
-        "name": "Роман",
-        "surname": "Рыжов",
-        "patronymic": "Вячеславович",
-        "specialty": ["Челюстно-лицевой хирург"],
-        "accolades": "",
-        "department": "Отделение челюстно-лицевой хирургии",
-        "photoUrl": "/images/ryzhov-r-v.jpg",
-        "hasAppointments": false,
-        "isDepartmentHead": false
-    },
-    {
-        "name": "Андрей",
-        "surname": "Пантелеев",
-        "patronymic": "Андреевич",
-        "specialty": ["Травматолог-ортопед"],
-        "accolades": "Кандидат медицинских наук",
-        "department": "Отделение травматологии и ортопедии",
-        "photoUrl": "/images/panteleev-a-a.jpg",
-        "hasAppointments": false,
-        "isDepartmentHead": false
-    },
-    {
+        "id": "doc-0001",
         "name": "Александр",
         "surname": "Кугушев",
         "patronymic": "Юрьевич",
-        "specialty": ["Челюстно-лицевой хирург"],
-        "accolades": "Доктор медицинских наук",
-        "department": "Отделение челюстно-лицевой хирургии",
+        "specialties": ["челюстно-лицевой хирург", "детский онколог", "пластический хирург"],
+        "accolades": ["руководитель Междисциплинарного центра хирургии огранов головы и шеи", "доктор медицинских наук"],
         "photoUrl": "/images/kugushev-a-u.jpg",
-        "hasAppointments": false,
-        "isDepartmentHead": true
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0002",
+        "name": "Алексей",
+        "surname": "Бальченко",
+        "patronymic": "Вячеславович",
+        "specialties": ["челюстно-лицевой хирург"],
+        "accolades": [],
+        "photoUrl": "/images/balchenko-a-v.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0003",
+        "name": "Роман",
+        "surname": "Рыжов",
+        "patronymic": "Валентинович",
+        "specialties": ["челюстно-лицевой хирург"],
+        "accolades": ["кандидат медицинских наук"],
+        "photoUrl": "/images/ryzhov-r-v.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0004",
+        "name": "Сергей",
+        "surname": "Ясонов",
+        "patronymic": "Александрович",
+        "specialties": ["челюстно-лицевой хирург"],
+        "accolades": ["кандидат медицинских наук"],
+        "photoUrl": "/images/yasonov-s-a.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0005",
+        "name": "Алексей",
+        "surname": "Анеликов",
+        "patronymic": "Иванович",
+        "specialties": ["челюстно-лицевой хирург"],
+        "accolades": [],
+        "photoUrl": "/images/anelikov-a-i.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0006",
+        "name": "Андрей",
+        "surname": "Лопатин",
+        "patronymic": "Вячеславович",
+        "specialties": ["челюстно-лицевой хирург"],
+        "accolades": ["доктор медицинских наук", "профессор"],
+        "photoUrl": "/images/lopatin-a-v.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0007",
+        "name": "Николай",
+        "surname": "Грачев",
+        "patronymic": "Сергеевич",
+        "specialties": ["челюстно-лицевой хирург"],
+        "accolades": ["доктор медицинских наук", "профессор"],
+        "photoUrl": "/images/grachev-n-s.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0008",
+        "name": "Мкртчян",
+        "surname": "Каринэ",
+        "patronymic": "Егиевна",
+        "specialties": ["ортодонт"],
+        "accolades": [],
+        "photoUrl": "/images/mkrtchyan-k-e.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0009",
+        "name": "Макарова",
+        "surname": "Анастасия",
+        "patronymic": "Сергеевна",
+        "specialties": ["ортодонт"],
+        "accolades": [],
+        "photoUrl": "/images/makarova-a-s.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0010",
+        "name": "Александра",
+        "surname": "Наумова",
+        "patronymic": "Сергеевна",
+        "specialties": ["детский онколог"],
+        "accolades": ["кандидат медицинских наук"],
+        "photoUrl": "/images/naumova-a-s.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0011",
+        "name": "Валентин",
+        "surname": "Пальм",
+        "patronymic": "Вальтерович",
+        "specialties": ["нейрохирург"],
+        "accolades": ["врач высшей категории", "заслуженный врач РФ"],
+        "photoUrl": "/images/palm-v-v.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0012",
+        "name": "Дмитрий",
+        "surname": "Рещиков",
+        "patronymic": "Александрович",
+        "specialties": ["нейрохирург"],
+        "accolades": ["врач высшей категории", "заслуженный врач РФ"],
+        "photoUrl": "/images/reschikov-d-a.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0013",
+        "name": "Павел",
+        "surname": "Андрианов",
+        "patronymic": "Алексеевич",
+        "specialties": ["нейрохирург"],
+        "accolades": ["врач высшей категории"],
+        "photoUrl": "/images/andrianov-p-a.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0014",
+        "name": "Рони",
+        "surname": "Маи",
+        "patronymic": "Бахаэддин",
+        "specialties": ["нейрохирург"],
+        "accolades": [],
+        "photoUrl": "/images/mai-r-b.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0015",
+        "name": "Ирина",
+        "surname": "Рассказчикова",
+        "patronymic": "Васильевна",
+        "specialties": ["невролог"],
+        "accolades": [],
+        "photoUrl": "/images/rasskaschikova-i-v.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0016",
+        "name": "Надежда",
+        "surname": "Ляхова",
+        "patronymic": "Владимировна",
+        "specialties": ["врач функциональной диагностики"],
+        "accolades": [],
+        "photoUrl": "/images/lyahova-n-v.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0017",
+        "name": "Татьяна",
+        "surname": "Журавлева",
+        "patronymic": "Ивановна",
+        "specialties": ["врач функциональной диагностики"],
+        "accolades": [],
+        "photoUrl": "/images/zhuravleva-t-i.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0018",
+        "name": "Виктор",
+        "surname": "Чадаев",
+        "patronymic": "Алексеевич",
+        "specialties": ["невролог"],
+        "accolades": ["кандидат медицинских наук"],
+        "photoUrl": "/images/chadaev-v-a.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0019",
+        "name": "Алан",
+        "surname": "Мадзаев",
+        "patronymic": "Игоревич",
+        "specialties": ["нейрохирург"],
+        "accolades": [],
+        "photoUrl": "/images/madzaev-a-i.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0020",
+        "name": "Александр",
+        "surname": "Левов",
+        "patronymic": "Вячеславович",
+        "specialties": ["нейрохирург"],
+        "accolades": [],
+        "photoUrl": "/images/levov-a-v.jpg",
+        "hasAppointments": false
+    },
+    {
+        "id": "doc-0021",
+        "name": "Николай",
+        "surname": "Головин",
+        "patronymic": "Иванович",
+        "specialties": ["нейрохирург"],
+        "accolades": [],
+        "photoUrl": "/images/golovin-n-i.jpg",
+        "hasAppointments": false
     }
 ]
