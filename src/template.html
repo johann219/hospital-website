@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Department Page</title>
-</head>
-<body>
-    <header>
-        <h1>
-            HOSPITAL
-        </h1>
-    </header>
-    <main>
-        <section class="sidebar-left">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Department Page</title>
+    </head>
+    <body>
+        <header class="site-header">
+            <h1>HOSPITAL</h1>
+        </header>
 
-        </section>
-        <section class="doctor-list">
-        
-        </section>
-        <section class="sidebar-right">
-            
-        </section>
-        <template class="doctor-card-template">
-            <article class="doctor-card">
-                <img class="doctor-card-photo">
-                <h3 class="doctor-card-fullname"></h3>
-                <p class="doctor-card-specialty"></p>
-                <p class="doctor-card-accolades"></p>
-            </article>
-        </template>
-    </main>
-    <footer>
-        <h2>Made by johann219</h2>
-    </footer>
-</body>
+        <nav class="site-nav">
+            <a href="/home" class="nav-link" data-route="home">
+                Home
+            </a>
+            <a href="/departments" class="nav-link" data-route="departments">
+                Departments
+            </a>
+            <a href="/education" class="nav-link" data-route="education">
+                Education
+            </a>
+            <a href="/news" class="nav-link" data-route="news">
+                News
+            </a>
+        </nav>
+
+        <main class="layout-grid" id="router-view">
+            blah blah
+        </main>
+
+        <footer class="site-footer">
+            <h2>Made by johann219</h2>
+        </footer>
+    </body>
 </html>

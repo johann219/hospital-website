@@ -52,7 +52,7 @@ footer {
     color: #1A3A4D;
 }
 
-main {
+.layout-grid {
     flex: 1;
     display: grid;
     width: 100%;
@@ -66,7 +66,7 @@ main {
 }
 
 @media (width >= 1200px) {
-    main {
+    .layout-grid {
         grid-template-columns: 1fr 2fr 1fr;
     }
 

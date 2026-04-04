@@ -1,11 +1,16 @@
-const SELECTOR = {
-    DOCTOR_LIST: '.doctor-list',
-    DOCTOR_CARD_TEMPLATE: '.doctor-card-template',
-    DOCTOR_CARD: '.doctor-card',
-    DOCTOR_CARD_FULLNAME: '.doctor-card-fullname',
-    DOCTOR_CARD_SPECIALTY: '.doctor-card-specialty',
-    DOCTOR_CARD_ACCOLADES: '.doctor-card-accolades',
-    DOCTOR_CARD_PHOTO: '.doctor-card-photo',
+export const GLOBAL_SELECTOR = {
+    ROUTER_VIEW: '#router-view',
+    SITE_NAV: '.site-nav',
+    NAV_LINK: '.nav-link',
+    NAV_LINK_HOME: '[data-route="home"]',
+    NAV_LINK_DEPT: '[data-route="departments"]',
+    NAV_LINK_EDU: '[data-route="education"]',
+    NAV_LINK_NEWS: '[data-route="news"]'
 }
 
-export { SELECTOR };
+export const ROUTE = {
+    HOME: 'home',
+    DEPT: 'departments',
+    EDU: 'education',
+    NEWS: 'news'
+}
