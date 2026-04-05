@@ -4,8 +4,6 @@ import { departmentPresenter } from '../department-page/department-page-presente
 
 const handleDeptClick = (renderTarget, departmentsList, deptId) => {
     const departmentClicked = departmentsList.find((dept) => dept.id === deptId);
-    renderTarget.replaceChildren();
-    console.log(departmentClicked);
     departmentPresenter.initDepartmentPage(renderTarget, departmentClicked);
 };
 

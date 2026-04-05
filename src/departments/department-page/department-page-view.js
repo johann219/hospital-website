@@ -6,7 +6,7 @@ import doctorCardTemplateMarkup from './doctor-card.html';
 const departmentPageTemplate = Utils.parseHTML(departmentPageTemplateMarkup);
 const doctorCardTemplate = Utils.parseHTML(doctorCardTemplateMarkup);
 
-const createDoctorPhotoElement = (doctorCardFragment, doctor) => {
+const populateDoctorPhoto = (doctorCardFragment, doctor) => {
     const doctorPhotoElement = doctorCardFragment.querySelector(DOCTOR_SELECTOR.DOCTOR_CARD_PHOTO);
     doctorPhotoElement.setAttribute('src', doctor.photoUrl);
     doctorPhotoElement.addEventListener('error', () => {
@@ -14,18 +14,18 @@ const createDoctorPhotoElement = (doctorCardFragment, doctor) => {
     });
 };
 
-const createDoctorFullNameElement = (doctorCardFragment, doctor) => {
+const populateDoctorFullName = (doctorCardFragment, doctor) => {
     const doctorFullNameElement = doctorCardFragment.querySelector(DOCTOR_SELECTOR.DOCTOR_CARD_FULLNAME);
     doctorFullNameElement.textContent = `${doctor.surname} ${doctor.name} ${doctor.patronymic}`;
 };
 
-const createDoctorSpecialtiesElement = (doctorCardFragment, doctor) => {
+const populateDoctorSpecialties = (doctorCardFragment, doctor) => {
     const doctorSpecialtiesElement = doctorCardFragment.querySelector(DOCTOR_SELECTOR.DOCTOR_CARD_SPECIALTY);
     const doctorSpecialties = Utils.capitalizeFirstLetter(doctor.specialties.join(', '))
     doctorSpecialtiesElement.textContent = doctorSpecialties;
 };
 
-const createDoctorAccoladesElement = (doctorCardFragment, doctor) => {
+const populateDoctorAccolades = (doctorCardFragment, doctor) => {
     const doctorAccoladesElement = doctorCardFragment.querySelector(DOCTOR_SELECTOR.DOCTOR_CARD_ACCOLADES);
     const doctorAccolades = Utils.capitalizeFirstLetter(doctor.accolades.join(', '));
     doctorAccoladesElement.textContent = doctorAccolades;
@@ -34,13 +34,10 @@ const createDoctorAccoladesElement = (doctorCardFragment, doctor) => {
 const createDoctorCardElement = (doctor) => {
     const doctorCardFragment = doctorCardTemplate.cloneNode(true);
     
-    createDoctorPhotoElement(doctorCardFragment, doctor);
-
-    createDoctorFullNameElement(doctorCardFragment, doctor);
-
-    createDoctorSpecialtiesElement(doctorCardFragment, doctor);
-
-    createDoctorAccoladesElement(doctorCardFragment, doctor);
+    populateDoctorPhoto(doctorCardFragment, doctor);
+    populateDoctorFullName(doctorCardFragment, doctor);
+    populateDoctorSpecialties(doctorCardFragment, doctor);
+    populateDoctorAccolades(doctorCardFragment, doctor);
 
     return doctorCardFragment;
 }
