@@ -4,6 +4,9 @@ import { departmentPresenter } from '../department-page/department-page-presente
 
 const handleDeptClick = (renderTarget, departmentsList, deptId) => {
     const departmentClicked = departmentsList.find((dept) => dept.id === deptId);
+
+    history.pushState({ route: 'single-debt', id: deptId }, '', `/departments/${deptId}`);
+
     departmentPresenter.initDepartmentPage(renderTarget, departmentClicked);
 };
 

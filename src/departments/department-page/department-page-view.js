@@ -42,7 +42,7 @@ const createDoctorCardElement = (doctor) => {
     return doctorCardFragment;
 }
 
-const renderDoctorList = (departmentPageFragment, department, doctorList) => {
+const appendDoctorList = (departmentPageFragment, department, doctorList) => {
     const newFragment = new DocumentFragment();
 
     const departmentRoster = department.staffRoster;
@@ -57,12 +57,12 @@ const renderDoctorList = (departmentPageFragment, department, doctorList) => {
     departmentPageFragment.querySelector('.main-content').append(newFragment);
 };
     
-const createDepartmentName = (departmentPageFragment, department) => {
+const populateDepartmentName = (departmentPageFragment, department) => {
     const departmentName = departmentPageFragment.querySelector(DEPT_SELECTOR.DEPT_NAME);
     departmentName.textContent = department.name;
 };
 
-const createDepartmentDescription = (departmentPageFragment, department) => {
+const populateDepartmentDescription = (departmentPageFragment, department) => {
     const newFragment = new DocumentFragment();
 
     department.description.forEach((descriptionPara) => {
@@ -74,7 +74,7 @@ const createDepartmentDescription = (departmentPageFragment, department) => {
     departmentPageFragment.querySelector(DEPT_SELECTOR.DEPT_DESC).append(newFragment);
 };
 
-const renderDepartmentHead = (departmentPageFragment, department, doctorList) => {
+const appendDepartmentHead = (departmentPageFragment, department, doctorList) => {
     const departmentHead = doctorList.find((doctor) => doctor.id === department.head);
 
     const departmentHeadCard = createDoctorCardElement(departmentHead);
@@ -90,10 +90,10 @@ const renderDepartmentPage = (renderTarget, department, doctorList) => {
 
     const departmentPageFragment = departmentPageTemplate.cloneNode(true);
 
-    createDepartmentName(departmentPageFragment, department);
-    createDepartmentDescription(departmentPageFragment, department);
-    renderDepartmentHead(departmentPageFragment, department, doctorList);
-    renderDoctorList(departmentPageFragment, department, doctorList);
+    populateDepartmentName(departmentPageFragment, department);
+    populateDepartmentDescription(departmentPageFragment, department);
+    appendDepartmentHead(departmentPageFragment, department, doctorList);
+    appendDoctorList(departmentPageFragment, department, doctorList);
 
     renderTarget.append(departmentPageFragment);
 };

@@ -21,7 +21,8 @@ siteNav.addEventListener('click', (evt) => {
     clearRouterView();
 
     const route = evt.target.dataset.route;
-    
+    history.pushState({ route: route }, '', `/${route}`);
+
     switch(route) {
         case ROUTE.HOME:
             //homePresenter.init();
@@ -39,6 +40,25 @@ siteNav.addEventListener('click', (evt) => {
             //homePresenter.init();
             //console.log('Clicked News navigation link');
             break;
+    }
+});
+
+window.addEventListener('popstate', (evt) => {
+    const state = evt.state;
+
+    clearRouterView();
+    
+    if (!state) {
+        //homePresenter.init();
+        return;
+    }
+
+    if (state.route === 'departments') {
+        departmentsListPresenter.initDepartmentsList(routerView);
+    } else if (state.route === 'single-dept') {
+        console.log(`User clicked back to department: ${state.id}`);
+    } else if (state.route === 'home') {
+        //homePresenter.init();
     }
 });
 
