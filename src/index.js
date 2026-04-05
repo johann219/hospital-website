@@ -13,13 +13,11 @@ const clearRouterView = () => {
 };
 
 siteNav.addEventListener('click', (evt) => {
+    evt.preventDefault();
     const navLink = evt.target.closest(GLOBAL_SELECTOR.NAV_LINK);
 
-    if (!navLink) {
-        return;
-    }
+    if (!navLink) return;
     
-    evt.preventDefault();
     clearRouterView();
 
     const route = evt.target.dataset.route;
@@ -27,19 +25,19 @@ siteNav.addEventListener('click', (evt) => {
     switch(route) {
         case ROUTE.HOME:
             //homePresenter.init();
-            console.log('Clicked Home navigation link');
+            //console.log('Clicked Home navigation link');
             break;
         case ROUTE.DEPT:
             departmentsListPresenter.initDepartmentsList(routerView);
-            console.log('Clicked Departments navigation link');
+            //console.log('Clicked Departments navigation link');
             break;
         case ROUTE.EDU:
             //educationPresenter.init();
-            console.log('Clicked Education navigation link');
+            //console.log('Clicked Education navigation link');
             break;
         case ROUTE.NEWS:
             //homePresenter.init();
-            console.log('Clicked News navigation link');
+            //console.log('Clicked News navigation link');
             break;
     }
 });
