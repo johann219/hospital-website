@@ -1,6 +1,6 @@
 import './styles/styles.css';
 import { GLOBAL_SELECTOR, ROUTE } from './const.js';
-import { departmentsListPresenter } from './departments/departments-list/presenter.js';
+import { departmentsListPresenter } from './departments/departments-list/departments-list-presenter.js';
 // import { homePresenter } from './home/presenter.js';
 // import { educationPresenter } from './education/presenter.js';
 // import { newsPresenter } from './news/presenter.js';

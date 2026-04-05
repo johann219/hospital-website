@@ -1,4 +1,4 @@
-const SELECTOR = {
+const DOCTOR_SELECTOR = {
     DOCTOR_LIST: '.doctor-list',
     DOCTOR_CARD_TEMPLATE: '.doctor-card-template',
     DOCTOR_CARD: '.doctor-card',
@@ -8,4 +8,10 @@ const SELECTOR = {
     DOCTOR_CARD_PHOTO: '.doctor-card-photo',
 }
 
-export { SELECTOR };
+const DEPT_SELECTOR = {
+    DEPT_DESC: '.department-description',
+    DEPT_NAME: '.department-name',
+    DEPT_HEAD_WRAP: '.department-head-wrapper',
+}
+
+export { DOCTOR_SELECTOR, DEPT_SELECTOR };

@@ -1,6 +1,6 @@
-import { departmentsListModel } from './model.js';
-import { departmentsListView } from './view.js';
-import { departmentPresenter } from '../department-page/presenter.js';
+import { departmentsListModel } from './departments-list-model.js';
+import { departmentsListView } from './departments-list-view.js';
+import { departmentPresenter } from '../department-page/department-page-presenter.js';
 
 const handleDeptClick = (renderTarget, departmentsList, deptId) => {
     const departmentClicked = departmentsList.find((dept) => dept.id === deptId);
