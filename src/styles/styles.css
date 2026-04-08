@@ -33,7 +33,7 @@ img, picture, video, canvas, svg {
 }
 
 body {
-    /* background-color: var(--logo-blue); */
+    background-color: #E2F0F9;;
     display: flex;
     flex-direction: column;
     align-items: safe center;
@@ -67,7 +67,8 @@ footer {
 
 @media (width >= 1200px) {
     .layout-grid {
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 200px 1fr 200px;
+        max-width: 1400px;
     }
 
     .sidebar-left,
@@ -75,22 +76,62 @@ footer {
         display: flex;
     }
 
+    .doctor-card {
+        font-size: 0.8rem;
+    }
 }
 
-.doctor-list {
+.department-content {
+    color: #002147;
+    padding: 0 1rem;
+}
+
+.department-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    padding: 1rem 0;
+}
+
+.department-description {
+    background-color: #C5E2F2;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.department-doctors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: grid;
-    gap: 20px;
+    gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.department-doctors-caption,
+.department-head-caption {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.doctor-card-wrapper {
+    display: flex;
 }
 
 .doctor-card {
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 0.2rem;
     background-color: #C5E2F2;
-    color: #1A3A4D;
     padding: 1rem;
-    font-size: 0.8rem;
     font-weight: 200;
     border-radius: 0.6rem;
     box-shadow: 
@@ -106,9 +147,10 @@ footer {
         0 4px 6px -4px rgba(26, 58, 77, 0.1);
 }
 
-.doctor-card-fio {
-    font-size: 1.2rem;
+.doctor-card-fullname {
+    font-size: 1.2em;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 .doctor-card-photo {
