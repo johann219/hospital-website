@@ -14,6 +14,7 @@ export default {
     devServer: {
         watchFiles: ["./src/template.html"],
         static: "./public",
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
