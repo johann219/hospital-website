@@ -42,6 +42,13 @@ const createDoctorCardElement = (doctor) => {
     return doctorCardFragment;
 }
 
+const createDoctorCardWrapper = (doctorCard) => {
+    const doctorCardWrapper = document.createElement('li');
+    doctorCardWrapper.classList.add('doctor-card-wrapper');
+    doctorCardWrapper.append(doctorCard);
+    return doctorCardWrapper;
+};
+
 const appendDoctorList = (departmentPageFragment, department, doctorList) => {
     const newFragment = new DocumentFragment();
 
@@ -49,12 +56,14 @@ const appendDoctorList = (departmentPageFragment, department, doctorList) => {
 
     departmentRoster.forEach ((departmentDoctorId) => {
         const departmentDoctor = doctorList.find((doctor) => doctor.id === departmentDoctorId);
-        const departmentDoctorCardElement = createDoctorCardElement(departmentDoctor);
+        const departmentDoctorCard = createDoctorCardElement(departmentDoctor);
 
-        newFragment.append(departmentDoctorCardElement);
+        const wrappedDoctorCard = createDoctorCardWrapper(departmentDoctorCard);
+        
+        newFragment.append(wrappedDoctorCard);
     });
 
-    departmentPageFragment.querySelector('.main-content').append(newFragment);
+    departmentPageFragment.querySelector('.department-doctors-list').append(newFragment);
 };
     
 const populateDepartmentName = (departmentPageFragment, department) => {
